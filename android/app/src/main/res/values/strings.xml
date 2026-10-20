@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Chat Offline</string>
+    <string name="title_activity_main">Chat Offline</string>
+    <string name="package_name">com.fabio.chatoffline</string>
+    <string name="custom_url_scheme">com.fabio.chatoffline</string>
+</resources>

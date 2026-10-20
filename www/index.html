@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0e1117">
+<title>Chat Offline</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="lib/peerjs.min.js"></script>
+<script src="lib/qrcode.min.js"></script>
+</head>
+<body>
+<!-- TELA DE LOGIN -->
+<div id="login-screen">
+  <h2>Chat Offline</h2>
+  <p>Digite seu nome para gerar o ID</p>
+  <input id="pairName" placeholder="Ex: Fabio" />
+  <button id="btnLogin">Entrar</button>
+  
+  <div id="myIdBox" style="display:none; margin-top:20px;">
+    <p>Seu ID para parear: <b id="myIdText" style="color:#25d366; font-size:1.2rem;"></b></p>
+    <div style="background:#fff; padding:10px; border-radius:12px; display:inline-block; margin-top:10px;">
+      <canvas id="qrCanvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- TELA DO APLICATIVO -->
+<div id="app-screen" style="display:none">
+  <header>
+    <span>Logado: <b id="displayName"></b></span>
+    <button id="btnScan">🔍 Conectar</button>
+  </header>
+
+  <div class="tabs">
+    <button onclick="showTab('parear')" class="active-tab">Parear</button>
+    <button onclick="showTab('chats')">Chat</button>
+  </div>
+
+  <div id="tab-parear">
+    <!-- BLUETOOTH CLÁSSICO -->
+    <div class="card">
+        <h3>📶 Bluetooth (Perto ~10m)</h3>
+        <button id="btnBtServer" style="background:#3498db; color:white; margin-bottom:8px;">📡 Ficar Disponível (Servidor)</button>
+        <button id="btnBtScan" style="background:#e67e22; color:white;">🔍 Procurar Dispositivos</button>
+        <div id="listaBtDispositivos" style="margin-top:10px; font-size:14px;"></div>
+    </div>
+    
+    <!-- WI-FI / PEERJS -->
+    <div class="card">
+        <h3>🌐 Internet/Wi-Fi (Alternativa)</h3>
+        <input id="remoteIdInput" placeholder="ID do outro celular" />
+        <button id="btnConnectId">Conectar por ID</button>
+    </div>
+  </div>
+
+  <div id="tab-chats" style="display:none">
+    <div id="chatBox">
+      <div id="mensagens"></div>
+      <div class="inputArea">
+        <input id="msgInput" placeholder="Mensagem..." type="text" />
+        <button id="btnSend">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

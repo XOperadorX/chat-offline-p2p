@@ -1,0 +1,31 @@
+{
+  "name": "chat-offline-p2p",
+  "version": "1.0.0",
+  "description": "100% offline, sem servidor, P2P direto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "@capacitor-community/bluetooth-le": "^8.3.0",
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/camera": "^8.2.6",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/filesystem": "^8.1.5",
+    "@yesprasoon/capacitor-bluetooth-communication": "^1.0.0",
+    "idb": "^8.0.4",
+    "peerjs": "^1.5.5",
+    "qrcode": "^1.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOperadorX/chat-offline-p2p.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XOperadorX/chat-offline-p2p/issues"
+  },
+  "homepage": "https://github.com/XOperadorX/chat-offline-p2p#readme"
+}
